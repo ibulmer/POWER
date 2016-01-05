@@ -1,0 +1,20 @@
+<html ng-app="powerIce">
+<head>
+<script src="lib/bower_components/angular/angular.js"></script> 
+<script src = "app/app.js"></script>	
+</head>
+<body  ng-controller="PowerController as power">
+    <div ng-repeat="toot in power.toots | orderBy:'-likes'">
+      <h3>
+        {{toot.likes+ " power points! " + toot.title + " by " + toot.name }}
+        <button class="btn" ng-click="power.like(toot.index)">LIKE</button>
+      </h3>
+       
+                  
+    <!-- createToDo() WILL CREATE NEW TODOS -->
+ 
+                
+    </div>
+      <div>{{power.toots[0]}}<a href = "http://www.google.com/">{{power.toots[1]}}</a></div>
+  </body>
+</html>
