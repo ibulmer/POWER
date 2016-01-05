@@ -1,5 +1,6 @@
 
-angular.module('powerIce', ['ngRoute'])
+angular.module('powerIce', ['powerIce.goose',
+	'ngRoute'])
   .controller('PowerController', function($scope){
 	var vm = this;
 	vm.order_item = 'likes',
@@ -11,7 +12,8 @@ angular.module('powerIce', ['ngRoute'])
 }).config(function ($routeProvider, $httpProvider){
   $routeProvider
 	.when('/mongoose', {
-      templateUrl: 'app/tutorials/mongoose.html'
+      templateUrl: 'app/tutorials/mongoose.html',
+      controller: 'GooseController'
     })
 });
 

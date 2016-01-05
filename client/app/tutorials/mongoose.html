@@ -1,3 +1,7 @@
-<div id = 'goose'>
-  <h1>MONGOOSE AND ME</h1>
+<div id = 'goose' ng-app='powerIce.goose'>
+  <div ng-controller = "GooseController as goose">
+  	<div ng-repeat="teaching in goose.teachings">
+  		{{teaching.step}}
+  	</div>
+  </div>
 </div>
