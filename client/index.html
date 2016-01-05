@@ -5,21 +5,9 @@
 <script src="lib/bower_components/angular-route/angular-route.js"></script>
 <script src = "app/app.js"></script>
 <script src = "app/tutorials/mongoose.js"></script>	
+<script src = "app/home/home.js"></script>	
 </head>
-<body  ng-controller="PowerController as power">
-<div ng-view></div>
-    <div ng-repeat="toot in power.toots | orderBy:'-likes'">
-      <h3>
-        {{toot.likes+ " power points! "}}<a href ={{toot.url}}>{{toot.title}}</a> {{" by " + toot.name }}
-        <button class="btn" ng-click="power.like(toot.index)">LIKE</button>
-      </h3>
-       
-    
-      
-    </div>              
-    <!-- createToDo() WILL CREATE NEW TODOS -->
- 
-                
-    </div>
-  </body>
+<body>
+<div ng-view></div>            
+</body>
 </html>

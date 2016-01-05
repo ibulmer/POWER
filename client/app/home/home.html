@@ -1,1 +1,10 @@
-home.html
+<div id = 'home' ng-app='powerIce.home'>
+<div ng-controller = "HomeController as power">
+<div ng-repeat="toot in power.toots | orderBy:'-likes'">
+  <h3>
+    {{toot.likes+ " power points! "}}<a href ={{toot.url}}>{{toot.title}}</a> {{" by " + toot.name }}
+    <button class="btn" ng-click="power.like(toot.index)">LIKE</button>
+  </h3>
+</div>  
+</div>
+</div>

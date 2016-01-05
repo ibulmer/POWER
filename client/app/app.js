@@ -1,20 +1,16 @@
 
-angular.module('powerIce', ['powerIce.goose',
+angular.module('powerIce', ['powerIce.goose', 'powerIce.home',
 	'ngRoute'])
-  .controller('PowerController', function($scope){
-	var vm = this;
-	vm.order_item = 'likes',
-	vm.order_reverse = false;
-	vm.toots = tutorials;
-	vm.like = function(index){
-      vm.toots[index].likes++;
-	}
-}).config(function ($routeProvider, $httpProvider){
-  $routeProvider
-	.when('/mongoose', {
+  .config(function ($routeProvider, $httpProvider){
+	  $routeProvider
+		.when('/mongoose', {
       templateUrl: 'app/tutorials/mongoose.html',
       controller: 'GooseController'
-    })
+	  })
+	  .when('/', {
+	  	templateUrl: 'app/home/home.html',
+	    controller: 'HomeController'
+	  })
 });
 
 
